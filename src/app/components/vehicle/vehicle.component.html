@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <h1>Vehicles via Angular works!</h1>
+
+    <pre>{{ vehicles | json }}</pre>
+    
+    <hr>
+
+    <label for="vehicle-search">Search for a vehicle</label>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" id="vehicle-search" [(ngModel)]="vehicleSearch" (keyup.enter)="getVehicle()">
+        <div class="input-group-append">
+            <button class="btn btn-outline-primary" (click)="getVehicle()">Go</button>
+        </div>
+    </div>
+
+    <pre *ngIf="searchedVehicle">{{ searchedVehicle | json }}</pre>
+</div>
