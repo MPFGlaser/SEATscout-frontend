@@ -9,12 +9,14 @@ import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { JourneyComponent } from './components/journey/journey.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VehicleComponent,
-    HomeComponent
+    HomeComponent,
+    JourneyComponent
   ],
   imports: [
     BrowserModule,
