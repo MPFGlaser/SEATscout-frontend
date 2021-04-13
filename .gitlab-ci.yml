@@ -13,7 +13,7 @@ build:
 
 code_quality:
   stage: code_quality
-  script: sonar-scanner -Dsonar.projectKey=$SONAR_KEY -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_LOGIN
+  script: /home/sonarqube/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=$SONAR_KEY -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_LOGIN
 
 after_script:
   - echo "End CI"
