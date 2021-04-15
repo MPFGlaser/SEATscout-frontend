@@ -6,11 +6,11 @@ import { Journey } from '../interfaces/journey';
   providedIn: 'root'
 })
 export class JourneyService {
-  apiBaseUrl = 'http://localhost:8080';
+  apiBaseUrl = 'http://localhost:8080/api/journeys';
 
   constructor(private http: HttpClient) { }
 
   getJourneys(){
-    return this.http.get<Journey[]>(`${this.apiBaseUrl}/journeys`);
+    return this.http.get<Journey[]>(`${this.apiBaseUrl}/all`);
   }
 }
