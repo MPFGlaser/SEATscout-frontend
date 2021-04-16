@@ -6,15 +6,15 @@ import { Vehicle } from '../interfaces/vehicle';
   providedIn: 'root'
 })
 export class VehicleService {
-  apiBaseUrl = 'http://localhost:8080';
+  apiBaseUrl = 'http://localhost:8080/api/vehicles';
 
   constructor(private http: HttpClient) { }
 
   getVehicles() {
-    return this.http.get<Vehicle[]>(`${this.apiBaseUrl}/vehicles`);
+    return this.http.get<Vehicle[]>(`${this.apiBaseUrl}/all`);
   }
 
   getVehicle(name: string) {
-    return this.http.get<Vehicle>(`${this.apiBaseUrl}/vehicles/${name}`);
+    return this.http.get<Vehicle>(`${this.apiBaseUrl}/type_name/${name}`);
   }
 }
