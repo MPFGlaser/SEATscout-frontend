@@ -4,10 +4,9 @@ stages:
   - code_quality
   - after_script
 
-image: node:latest
+image: teracy/angular-cli
 
 before_script:
-  - npm install -g @angular/cli
 
 build:
   stage: build
