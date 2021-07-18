@@ -7,7 +7,7 @@ stages:
 before_script:
   - apt-get update
   - apt-get upgrade
-  - apt-get install nodejs
+  - apt-get --assume-yes install nodejs
   - npm ci
 
 build:
