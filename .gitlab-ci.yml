@@ -4,11 +4,10 @@ stages:
   - code_quality
   - after_script
 
+image: node:latest
+
 before_script:
-  - apt-get update
-  - apt-get upgrade
-  - apt-get --assume-yes install npm
-  - npm ci
+
 
 build:
   stage: build
