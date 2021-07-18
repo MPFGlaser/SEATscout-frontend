@@ -5,6 +5,7 @@ stages:
   - after_script
 
 before_script:
+  - apt install nodejs
   - npm ci
 
 build:
